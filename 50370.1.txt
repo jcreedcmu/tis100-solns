@@ -1,0 +1,42 @@
+@0
+
+
+@1
+MOV ACC, DOWN
+ADD 1
+
+@2
+
+
+@3
+
+
+@4
+MOV 0, RIGHT
+MOV UP, DOWN
+MOV 15, ACC
+L: SUB 1
+MOV 3, RIGHT
+MOV 3, DOWN
+JNZ L
+MOV -1, RIGHT
+MOV -1, DOWN
+
+@5
+MOV LEFT, DOWN
+
+@6
+
+
+@7
+
+
+@8
+MOV UP, RIGHT
+
+@9
+MOV UP, DOWN
+MOV LEFT, DOWN
+
+@10
+

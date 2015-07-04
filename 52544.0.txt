@@ -1,0 +1,62 @@
+@0
+
+
+@1
+MOV UP, DOWN
+MOV UP, DOWN
+MOV UP, RIGHT
+MOV UP, RIGHT
+
+@2
+MOV LEFT, DOWN
+MOV LEFT, DOWN
+
+@3
+
+
+@4
+MOV UP, ACC # X
+SWP         #  X
+MOV UP, ACC # YX
+L: JRO RIGHT
+SWP         # XY
+MOV ACC, DOWN # X
+SWP         # YX
+MOV ACC, DOWN # Y
+ADD 1
+JMP L
+
+@5
+MOV UP, ACC # W
+SWP         #  W
+MOV UP, ACC # HW
+L: JEZ S
+MOV 1, LEFT
+SWP         # WH
+MOV ACC, DOWN
+SWP         # HW
+SUB 1
+JMP L
+S: MOV -3, LEFT
+
+@6
+
+
+@7
+
+
+@8
+MOV UP, RIGHT
+
+@9
+MOV LEFT, DOWN
+MOV LEFT, DOWN
+MOV UP, ACC
+L:
+MOV 3, DOWN
+SUB 1
+JNZ L
+MOV -1, DOWN
+
+@10
+
